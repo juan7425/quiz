@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px 16px 40px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #0b1f4d;
+    background: #f4f6fb;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.encabezado {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #0b1f4d;
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.subtitulo {
+    margin: 6px 0 36px;
+    color: #444;
+    font-size: clamp(15px, 2.4vw, 20px);
+    font-weight: 500;
+}
+
+.seccion-recetas h2 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 24px;
+    color: #0b1f4d;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+}
+
+.seccion-recetas h2::after {
+    content: "";
+    height: 3px;
+    flex: 1;
+    background: #1f78c8;
+    margin-top: 10px;
+}
+
+.lista-recetas {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.receta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px;
+    border: 2px solid #dcdfe4;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.receta img {
+    display: block;
+    width: 38%;
+    max-width: 320px;
+    aspect-ratio: 4 / 3.2;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.detalles {
+    flex: 1;
+    min-width: 0;
+}
+
+.detalles h3 {
+    margin: 0 0 14px;
+    color: #0b1f4d;
+    font-size: clamp(22px, 3.6vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.detalles p {
+    margin: 8px 0;
+    padding: 9px 12px;
+    border-radius: 7px;
+    background: #eeeff1;
+    color: #222;
+    font-size: clamp(13px, 1.9vw, 16px);
+    line-height: 1.35;
+}
+
+.detalles strong {
+    margin-right: 6px;
+    color: #111;
+    font-weight: 700;
+}
+
+.cargando, .error {
+    color: #444;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .receta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .receta img {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 11;
+    }
+}
